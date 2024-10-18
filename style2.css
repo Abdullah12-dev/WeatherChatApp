@@ -273,7 +273,7 @@ input:checked + .slider:before {
 
 
 .pagination {
-    display: none; /* Initially hidden */
+    display: none;
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
@@ -351,14 +351,11 @@ input:checked + .slider:before {
         padding: 0; 
     }
 
-    .sidebar nav ul li {
-        margin-right: 15px;
-    }
-
     .sidebar nav ul li a {
         padding: 8px 10px;
-        font-size: 1.1rem;
+        font-size: medium;
     }
+    
     .top-bar {
         flex-direction: column;
     }
