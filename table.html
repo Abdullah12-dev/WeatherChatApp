@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Tables Page with Chatbot</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="images/Logo.png">
+                <h2>Weather App</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="#">Tables</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="search-bar-container">
+                    <input type="text" id="citySearch" class="search-bar" placeholder="Search city...">
+                    <span class="search-icon">&#x1F50D;</span>
+                </div>
+                <div class="temp-toggle">
+                    <span>°C</span>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleTemp">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>°F</span>
+                </div>
+            </div>
+
+            <div class="content-sections">
+                <div class="forecast-table">
+                    <div class="filter-bar">
+                        <label for="filterSelect">Filter:</label>
+                        <select id="filterSelect">
+                            <option value="all">All Days</option>
+                            <option value="ascending">Temperatures Ascending</option>
+                            <option value="rainy">Rainy Days</option>
+                            <option value="highest">Highest Temperature</option>
+                            <option value="descending">Temperatures Descending</option>
+                        </select>
+                    </div>
+                    <h3 id="cityName"></h3>
+                    <h3>5-Day Temperature Forecast</h3>
+                    <table id="forecastTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temperature</th>
+                                <th>Weather</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div id="loadingSpinner" style="display:none;" class="spinner"></div>
+                    <div class="pagination"></div>
+                </div>
+
+                <div class="chatbot-section">
+                    <h3>Chatbot</h3>
+                    <div id="answer-area" class="answer-area">
+                    </div> 
+                    <div class="chat-bar">
+                        <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                        <span class="search-icon" id="send-btn">&#x1F50D;</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
